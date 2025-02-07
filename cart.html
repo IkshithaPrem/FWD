@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen & Stationery Management</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwnjlEmvjpPmnCBDVW8GrOvTvxtNSh2pwqQ&s">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+    <header>
+        <img src="https://png.pngtree.com/png-vector/20210122/ourmid/pngtree-vintage-style-logo-for-canteen-garage-workshop-with-gear-wrench-spoon-png-image_2782459.jpg" alt="company-logo" id="logo">
+        <div class="navbar">
+            <h1>College Canteen & Stationery</h1>
+            <nav>
+                <ul>
+                    <li><a href="signup.html">Signup/Login</a></li>
+                    <li><a href="fwd.html">Back to menu</a></li>
+                    <li><a href="javascript:void(0);" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-price">Total: ₹0</p>
+        <button onclick="checkout()">Proceed to Pay</button>
+    </section>
+
+    <section id="payment-section" style="display:none;">
+        <h2>Payment</h2>
+        <div id="pay"></div>
+        <form id="payment-form">
+            <label for="credit-card">Credit Card</label>
+            <input type="radio" name="payment-method" id="credit-card" value="Credit Card" required><br>
+
+            <label for="debit-card">Debit Card</label>
+            <input type="radio" name="payment-method" id="debit-card" value="Debit Card"><br>
+
+            <label for="upi">UPI</label>
+            <input type="radio" name="payment-method" id="upi" value="UPI"><br>
+
+            <label for="cash">Cash on Delivery</label>
+            <input type="radio" name="payment-method" id="cash" value="Cash on Delivery"><br>
+
+            <button type="submit">Confirm Payment</button>
+        </form>
+        <button onclick="backToCart()">Cancel</button>
+    </section>
+
+
+
+    <div id="order-summary" style="display: none;">
+        <h2>Order Summary</h2>
+        <div id="order-items"></div> <!-- Container for order items -->
+        <div id="order-code"></div> <!-- Container for order code and copy button -->
+        <div id="whatsapp-message"></div>
+        <p>Your order will be ready in 15 minutes!</p>
+        <button onclick="backToHomePage()">Cancel and back to Home</button>
+    </div>
+    
+    
+    
+
+    <script src="cart.js"></script>
+</body>
+</html>

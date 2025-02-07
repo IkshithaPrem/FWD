@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen & Stationery Management</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwnjlEmvjpPmnCBDVW8GrOvTvxtNSh2pwqQ&s">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body style="background-image: url('https://i.pinimg.com/originals/fc/ce/2f/fcce2f5b5b6fe163916a7e396e2c540f.jpg'); background-size: cover;
+background-position: fit;
+background-repeat: no-repeat;
+margin: 0;
+font-family: Arial, sans-serif;
+height: auto;">
+
+
+
+
+    <header>
+        <img src="https://png.pngtree.com/png-vector/20210122/ourmid/pngtree-vintage-style-logo-for-canteen-garage-workshop-with-gear-wrench-spoon-png-image_2782459.jpg" alt="company-logo" id="logo">
+        <div class="navbar">
+            <h1>College Canteen & Stationery</h1>
+            <nav>
+                <ul>
+                    <li><a href="#signup">Sign Up</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sign Up Form -->
+    <section id="signup">
+        <h2>Create Your Account</h2>
+        <form id="signup-form">
+            <div class="input-container">
+                <input type="text" placeholder="Enter your Username" required>
+                <i class="icon fa fa-user"></i>
+            </div>
+            <div class="input-container">
+                <input type="email" placeholder="Enter your Email" required>
+                <i class="icon fa fa-envelope"></i>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Create a Password" required>
+                <i class="icon fa fa-lock"></i>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Confirm Password" required>
+                <i class="icon fa fa-lock"></i>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <!-- Login Form -->
+    <section id="login">
+        <h2>User Login</h2>
+        <form id="login-form">
+            <div class="input-container">
+                <input type="text" placeholder="Username" required>
+                <i class="icon fa fa-user"></i>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Password" required>
+                <i class="icon fa fa-lock"></i>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="login-message">New here? <a href="#signup">Sign up</a></p>
+    </section>
+
+    <footer>
+        <div id="about">
+            <h3>About Us</h3>
+            <p>This is a simple management system for the college canteen and stationery store.</p>
+        </div>
+        <div id="contact">
+            <h3>Contact Us</h3>
+            <p>Email: collegecanteen@campus.com</p>
+            <p>Phone: +91 1234567890</p>
+        </div>
+    </footer>
+    <script src="script2.js"></script>
+</body>
+</html>

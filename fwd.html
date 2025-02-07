@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen & Stationery Management</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwnjlEmvjpPmnCBDVW8GrOvTvxtNSh2pwqQ&s">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; height: auto; position: relative;">
+
+    <!-- Transparent Image with Overlay -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://plus.unsplash.com/premium_photo-1663050786427-8d71c177946c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        filter: brightness(50%); /* Dim the image */
+    "></div>
+
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent white overlay */
+        z-index: -2;
+    "></div>
+    <header>
+        <img src="https://png.pngtree.com/png-vector/20210122/ourmid/pngtree-vintage-style-logo-for-canteen-garage-workshop-with-gear-wrench-spoon-png-image_2782459.jpg" alt="company-logo" id="logo">
+        <div class="navbar">
+            <h1>College Canteen & Stationery</h1>
+            <nav>
+                <ul>
+                    <li><a href="signup.html">Signup/Login</li>
+                    <li><a href="javascript:void(0);" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="home-page" >
+        <section id="canteen">
+            <h2>Canteen Menu</h2>
+<!-- Menu Grid with Items -->
+<div class="menu-grid">
+    <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmyefD8KZcSFkgJHj6cUEjUs-B3Q_hz5AWndA27DWVh2nLsM7rfao1zw&s.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Cheesy and delicious</p>
+        <span class="price">₹150</span>
+        <button onclick="addToCart('Pizza', 150, 'https://1tsp.in/wp-content/uploads/2021/07/image-1.jpg')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <img src="https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>Loaded with veggies</p>
+        <span class="price">₹90</span>
+        <button onclick="addToCart('Burger', 90, 'https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/04/french-fries-recipe.jpg" alt="Fries">
+        <h3>Fries</h3>
+        <p>Crispy and golden</p>
+        <span class="price">₹50</span>
+        <button onclick="addToCart('Fries', 50, 'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/04/french-fries-recipe.jpg')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg" alt="Coffee">
+        <h3>Coffee</h3>
+        <p>Strong and bold</p>
+        <span class="price">₹30</span>
+        <button onclick="addToCart('Coffee', 30, 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg')">Add to Cart</button>
+    </div>
+
+    <!-- Additional Items -->
+    <div class="menu-item">
+        <img src="https://th.bing.com/th/id/OIP.qHJIzQ-WXnx8QZBmQRaPHQHaE3?w=258&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Samosa">
+        <h3>Samosa</h3>
+        <p>Spicy and crispy</p>
+        <span class="price">₹20</span>
+        <button onclick="addToCart('Samosa', 20, 'https://th.bing.com/th/id/OIP.qHJIzQ-WXnx8QZBmQRaPHQHaE3?w=258&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <img src="https://th.bing.com/th/id/OIP.bAi4BAmtk6OyVLcGA1fu0wHaHa?w=235&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Noodles">
+        <h3>Noodles</h3>
+        <p>Hot and flavorful</p>
+        <span class="price">₹70</span>
+        <button onclick="addToCart('Noodles', 70, 'https://th.bing.com/th/id/OIP.bAi4BAmtk6OyVLcGA1fu0wHaHa?w=235&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <img src="https://yourlivewelljourney.com/wp-content/uploads/2019/09/homemade-yogi-tea.jpeg" alt="Tea">
+        <h3>Tea</h3>
+        <p>Refreshing and aromatic</p>
+        <span class="price">₹20</span>
+        <button onclick="addToCart('Tea', 20, 'https://yourlivewelljourney.com/wp-content/uploads/2019/09/homemade-yogi-tea.jpeg')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <img src="http://ts3.mm.bing.net/th?id=OIP.oodX9dbBMc6NmyQJojAD9gAAAA&pid=15.1" alt="Ice Cream">
+        <h3>Ice Cream</h3>
+        <p>Cool and creamy</p>
+        <span class="price">₹50</span>
+        <button onclick="addToCart('Ice Cream', 50, 'http://ts3.mm.bing.net/th?id=OIP.oodX9dbBMc6NmyQJojAD9gAAAA&pid=15.1')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <img src="https://vanitascorner.com/wp-content/uploads/2020/10/Vada-Pav.jpg" alt="Vada Pav">
+        <h3>Vada Pav</h3>
+        <p>Mumbai's favorite snack</p>
+        <span class="price">₹30</span>
+        <button onclick="addToCart('Vada Pav', 30, 'https://vanitascorner.com/wp-content/uploads/2020/10/Vada-Pav.jpg')">Add to Cart</button>
+    </div>
+</div>   
+        </section>
+
+        <section id="stationery">
+            <h2>Stationery Items</h2>
+            <div class="stationery-grid">
+                <div class="stationery-item">
+                    <img src="https://i.etsystatic.com/18836762/r/il/20897e/3571286260/il_570xN.3571286260_6hxn.jpg" alt="Notebooks">
+                    <h3>Notebooks</h3>
+                    <p>100 pages</p>
+                    <span class="price">₹40</span>
+                    <button onclick="addToCart('Notebooks', 40, 'https://i.etsystatic.com/18836762/r/il/20897e/3571286260/il_570xN.3571286260_6hxn.jpg')">Add to Cart</button>
+                </div>
+                <div class="stationery-item">
+                    <img src="https://m.media-amazon.com/images/I/81Lsd5CQqFL.jpg" alt="Pens">
+                    <h3>Pens</h3>
+                    <p>Pack of 3</p>
+                    <span class="price">₹20</span>
+                    <button onclick="addToCart('Pens', 20, 'https://m.media-amazon.com/images/I/81Lsd5CQqFL.jpg')">Add to Cart</button>
+                </div>
+                <div class="stationery-item">
+                    <img src="https://5.imimg.com/data5/RA/PD/MY-46995586/color-pencils.jpg" alt="Pencils">
+                    <h3>Pencils</h3>
+                    <p>Pack of 5</p>
+                    <span class="price">₹15</span>
+                    <button onclick="addToCart('Pencils', 15, 'https://5.imimg.com/data5/RA/PD/MY-46995586/color-pencils.jpg')">Add to Cart</button>
+                </div>
+                <div class="stationery-item">
+                    <img src="https://m.media-amazon.com/images/I/61C+GFM-l+L.jpg" alt="Markers">
+                    <h3>Markers</h3>
+                    <p>Set of 4</p>
+                    <span class="price">₹60</span>
+                    <button onclick="addToCart('Markers', 60, 'https://m.media-amazon.com/images/I/61C+GFM-l+L.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <footer>
+        <div id="about">
+            <h3>About Us</h3>
+            <p>This is a simple management system for the college canteen and stationery store.</p>
+        </div>
+        <div id="contact">
+            <h3>Contact Us</h3>
+            <p>Email: collegecanteen@campus.com</p>
+            <p>Phone: +91 1234567890</p>
+        </div>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
+
+
